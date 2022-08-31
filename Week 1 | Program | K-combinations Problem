@@ -1,0 +1,38 @@
+--------------------
+k-combinations
+--------------------
+
+        
+        - the number of unordered selections of k distinct elements from the set of size n.
+        
+        
+Theorem:
+
+        - Let n and k be two nonnegative integers, such that k <= n. The number if k-combinations of a set with n elements
+        equals:
+
+                        n         n!
+                          = --------------
+                        k     k! (n-k)!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
