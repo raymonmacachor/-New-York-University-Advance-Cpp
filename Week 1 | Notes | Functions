@@ -2,38 +2,218 @@
 Functions
 ----------------------
 
+----------------------------------------------------------------------------------------------------------------------------
+Return types
+----------------------------------------------------------------------------------------------------------------------------
+
+Void — The Point of No Return
+
+        - A void function, also known as a subroutine, has no return value, making it ideally suited for situations 
+        where you just want to print stuff to the terminal.
+
+Example:
+
+                        #include <iostream>
+
+                        // Define oscar_wilde_quote() below:
+
+                        void oscar_wilde_quote(){
+
+                          std::cout << "The highest, as the lowest, form of criticism is a mode of autobiography.";
+
+                        }
+
+
+                        int main() {
+
+                          // Call your function here:
+                          oscar_wilde_quote();
+
+                        }
 
 
 
 
+Return Types — Beyond the Void
+
+        - When you do in fact want your function to return something and pass information back to the rest of your program.
+
+
+Example:
+
+
+                        #include <iostream>
+
+                        // Change needs_it_support so that it returns support:
+                        bool needs_it_support() {
+
+                          bool support;
+
+                          std::cout << "Hello. IT. Have you tried turning it off and on again? Enter 1 for yes, 0 for no.\n";
+                          std::cin >> support;
+
+                          return support;
+
+                        }
+
+                        int main() {
+
+                          // Change the following line to print the function result:
+                          std::cout << needs_it_support();
+
+                        }
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+How Return Values Work
+------------------------------------------------------------------------------------------------------------------------------------------
+
+        
+        - When functions have a return type other than void, the function has two new requirements:
+
+                > There must be a value returned from the function.
+                > The return value must be the same type as the function’s return type.
+
+
+Example:
+
+                        std::string feed_the_cat() {
+
+                          return "Cat is fed!";
+
+                        }
+
+
+        And then print the function call inside of main():
+
+
+                        int main() {
+
+                          std::string cat_message = feed_the_cat();
+                          std::cout << cat_message;
+
+                        }
+
+        The return value of the function is what gets printed to the terminal.
+
+
+-------------------------------------------------------------------------------------------------------------
+Parameters & Arguments
+-------------------------------------------------------------------------------------------------------------
+
+        - Parameters (sometimes called formal parameters) are variables used in a function’s definition. 
+        They act as placeholders for the input values you’ll use during your function call.
 
 
 
+Example:
+
+
+                        #include <iostream>
+
+                        // Define get_emergency_number() below:
+                        void get_emergency_number(std::string emergency_number){
+
+                          std::cout << "Dial " << emergency_number;
+
+
+                        }
 
 
 
+                        int main() {
+
+                          // Original emergency services number 
+                          std::string old_emergency_number = "999";
+
+                          // For nicer ambulances, faster response times
+                          // and better-looking drivers
+                          std::string new_emergency_number = "0118 999 881 999 119 725 3";
+
+                          // Call get_emergency_number() below with
+                          // the number you want!
+                          get_emergency_number(new_emergency_number);
+
+                        }
 
 
 
+------------------------------------------------------------------------------------------------
+Tackling Multiple Arguments
+------------------------------------------------------------------------------------------------
+
+
+        - You can add as many as you like, but you will have to remember their order when you call the function.
+        
+ 
+ Example:
+ 
+ 
+                         double get_tip(double price, double tip, bool total_included) {
+
+                          if (total_included) {
+
+                            return price * tip + price;
+
+                          } else {
+
+                            return price * tip;
+
+                          }
+
+                        }
+
+        
+        So here we have three parameters:
+
+        > double price
+        > double tip
+        > bool total_included
+
+----------------------------------------------------------------------------------------------------
+How Parameters & Arguments Work
+----------------------------------------------------------------------------------------------------
+
+A function with parameters has a couple of requirements:
+
+        > The function call must include the same number of arguments as there are parameters.
+        > The corresponding arguments must be passed in the same order.
 
 
 
+--------------------------------------------------------------------------------------------------------
+The Scope of Things
+--------------------------------------------------------------------------------------------------------
+
+        - Scope is the region of code that can access or view a given element.
+        
+                > Variables defined in global scope are accessible throughout the program.
+        
+                > Variables defined in a function have local scope and are only accessible inside the function.
 
 
+--------------------------------------------------------------------------------------------------------
+Multi-File Programs
+--------------------------------------------------------------------------------------------------------
+
+        - To make your code cleaner and more modular, you can move the function definitions over to another specialized .cpp file 
+        (e.g., my_functions.cpp), leaving a list of declarations above main().
+
+        - But files, like functions, have scope. So, how does the main() program know about the function definitions?
+        
+        - Before your program even compiles, it links together any files you list in your compilation statement into a single executable:
+        
+                g++ main.cpp my_functions.cpp
+                
 
 
+Example:
 
 
-
-
-
-
-
-
-
-
-
-
+        |       main.cpp        |       fns.hpp         |        fns.cpp        |
+        
+        
+        - 
 
 
 
