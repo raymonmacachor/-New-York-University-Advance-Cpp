@@ -9,9 +9,21 @@ Runtime Analysis
         - The running time depends on the operators we use, and on the types of the data they
           are applied on.
           
+                > Ignore machine-dependent constants. We count each primitive operation as 1.
+                
+        - The running time depends on the machine's hardware technology.
         
+                > Make asymptotic analysis: look at the order or growth of T(n).
 
-
+                        - We compare the number of primitive operations executed by a process, as a function
+                        of its input size. 
+                        
+                Rule of thumb to get the order of growth:
+                
+                        - Drop low-order terms
+                        - Ignore leading constants
+                        
+                        
 
 
 
