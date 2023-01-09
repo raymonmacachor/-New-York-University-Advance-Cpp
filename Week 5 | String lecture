@@ -1,0 +1,87 @@
+----------------------------------------
+Initializing and Concatenating Strings
+----------------------------------------
+
+Example no 1:
+
+                #include <iostream>
+                #include <string>
+                using namespace std;
+                
+                
+                int main(){
+                
+                        string str;
+                        
+                        str = "abc";
+                        
+                        return 0;
+                    
+                }
+
+
+
+Example No 2:
+
+                #include <iostream>
+                #include <string>
+                using namespace std;
+                
+                int main(){
+                
+                        string str;
+                        
+                        str = "abc";
+                        std::cout << str + "def";
+                        
+                        return 0;
+                
+                }
+
+
+------------------------------------------------------------------------------------
+getline
+------------------------------------------------------------------------------------
+
+
+        - is a standard library function that is used to read a string or a line from an input stream.
+        - getline function is used to read the entire line of string.
+        
+
+Example:
+
+                int main() {
+                
+                        string str;
+                        
+                        cout << "Please enter your name" << endl;
+                        
+                        std::cin >> str;
+                        
+                        getline(cin, str);
+                        
+                        std::cout << str << endl;
+                        
+                        
+                        return 0;
+                
+                }
+
+
+
+Input:
+
+                Donald Duck
+                
+Output:
+
+                Donald Duck
+          
+------------------------------------------------------------------------------------
+
+
+
+
+
+
+
