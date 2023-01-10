@@ -78,12 +78,87 @@ Output:
                 Donald Duck
           
 ------------------------------------------------------------------------------------------------------------
+Indexing Strings
+------------------------------------------------------------------------------------------------------------
+
+ 
+        - In order to index strings, you can use brackets "[ and ]" to get or select the character in the string.
+        
+        
+Example:
 
 
+                int main(){
+                
+                        string word1, word2;
+                        char ch;
+                        
+                        std::cout << word1[0] << "" << word1[1] << ""  << word1[2] << endl;
+                        
+                        word1 = "abcdefg"
+                        
+                        ch == word1[3]
+                        
+                        std::cout << ch;
+                        
+                        return 0;
+                
+                }
 
 
+Output:
+
+                        a b c
+                        
+                        d
 
 
+------------------------------------------------------------------------------------------------------------
+Slicing Strings
+------------------------------------------------------------------------------------------------------------
+
+
+        - Slicing strings is basically take separate elements from a string using the indexing syntax just like arrays
+        
+
+
+Example:
+
+
+                int main(){
+                
+                        string str1, str2;
+                        char ch;
+                        
+                        str1 = "abcdefg";
+                        cout << str1[0] << " " << str1[1] << " " << str1[2] << endl;
+                        ch = str1[3];
+                        
+                        str1.substr(3, 2)
+                        
+                        return 0;
+                
+                
+                
+                }
+
+
+Note:
+
+                str1.substr(3, 2)
+                
+                
+                        - the number 3 represents the position os the character or the so called index.
+                        - the number 2 represents on how long or the range of the string
+                        
+                        
+Output:
+
+
+               d e 
+               
+               
+------------------------------------------------------------------------------------------------------------
 
 
 
