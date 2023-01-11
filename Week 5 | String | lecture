@@ -159,6 +159,40 @@ Output:
                
                
 ------------------------------------------------------------------------------------------------------------
+Length Method
+------------------------------------------------------------------------------------------------------------
+
+        - this method is used to calculate the length of a string.
+
+
+
+Example:
+
+                int main(){
+                        
+                        string name;
+                        int Rname;
+                        
+                        std::cout << "Please enter your name: ";
+                        std::cin >> "name";
+                        
+                        for(Rname = name.length(); Rname >= 0); Rname--){
+                        
+                        cout << name[Rname];
+                        
+                        }
+                        
+                        cout << endl;
+                
+                        return 0;
+                }
+
+
+
+
+
+
+
 
 
 
